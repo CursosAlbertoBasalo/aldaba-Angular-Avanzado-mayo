@@ -63,7 +63,8 @@
 
 ## 7. Componentes controladores y presentadores
 
-- [ ] Lista de operadores en un presentador independiente
+- [x] Lista de operadores en un presentador independiente
+- [ ] Formualrio buscador en presenter independiente
 - [ ] Lista de viajes en un presentador independiente
 - [ ] Mostrar la duración del viaje en días
 - [ ] Si la reserva no se ha pagado, mostrar un texto de advertencia

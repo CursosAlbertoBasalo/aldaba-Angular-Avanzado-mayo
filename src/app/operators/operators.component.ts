@@ -20,12 +20,6 @@ export class OperatorsComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  public getOperatorClass(operator: Operator): string {
-    return this.operatorsService.getOperatorClass(operator);
-  }
-  public getOperatorIcon(operator: Operator): string {
-    return this.operatorsService.getOperatorIcon(operator);
-  }
   public searchOperators(): void {
     this.operators$ = this.operatorsService
       .getOperators$()
