@@ -14,7 +14,7 @@ export class BookingsService {
 
   constructor(private httpClient: HttpClient) {}
 
-  public postBooking(booking: Booking) {
+  private postBooking(booking: Booking) {
     console.log({ reserva: booking });
     this.bookings.push(booking);
     console.log({ lista: this.bookings });
