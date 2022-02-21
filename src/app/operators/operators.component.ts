@@ -11,7 +11,6 @@ import { OperatorsService } from "./operators.service";
 export class OperatorsComponent implements OnInit {
   //public operators: Operator[];
   public operators$: Observable<Operator[]>;
-  public range = "";
 
   constructor(private operatorsService: OperatorsService) {
     //this.operators = this.operatorsService.getOperators();
@@ -20,9 +19,9 @@ export class OperatorsComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  public searchOperators(): void {
+  public searchOperators(range: string): void {
     this.operators$ = this.operatorsService
       .getOperators$()
-      .pipe(map((operators) => operators.filter((operator) => String(operator.range) === this.range)));
+      .pipe(map((operators) => operators.filter((operator) => String(operator.range) === range)));
   }
 }
