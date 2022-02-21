@@ -22,7 +22,10 @@ export class LoginComponent implements OnInit {
   public onSubmitClick() {
     // console.log(this.form.value);
     this.loginService.postCredentials(this.form.value).subscribe(
-      (data) => console.log(data),
+      (data) => {
+        console.log(data);
+        this.loginService.setIsLoggedIn(true);
+      },
       (error) => {
         console.log(error);
         console.log(error.status);

@@ -4,6 +4,51 @@
       "email": "alberto@aldaba.es",
       "password": "secret",
       "id": 1
+    },
+    {
+      "email": "alberto@aldaba.es",
+      "password": "secret",
+      "id": 2
+    },
+    {
+      "email": "alberto@aldaba.es",
+      "password": "secret",
+      "id": 3
+    },
+    {
+      "email": "alberto@aldaba.es",
+      "password": "secret",
+      "id": 4
+    },
+    {
+      "email": "alberto@aldaba.es",
+      "password": "secret",
+      "id": 5
+    },
+    {
+      "email": "alberto@aldaba.es",
+      "password": "secret",
+      "id": 6
+    },
+    {
+      "email": "alberto@aldaba.es",
+      "password": "secret",
+      "id": 7
+    },
+    {
+      "email": "alberto@aldaba.es",
+      "password": "secret",
+      "id": 8
+    },
+    {
+      "email": "alberto@aldaba.es",
+      "password": "secret",
+      "id": 9
+    },
+    {
+      "email": "alberto@aldaba.es",
+      "password": "secret",
+      "id": 10
     }
   ],
   "bookings": [

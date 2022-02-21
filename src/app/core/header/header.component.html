@@ -2,8 +2,11 @@
   <a routerLink="/">
     🚀 {{ title | uppercase }}
   </a>
-  <a routerLink="login"> 👤 Log In</a>
-  <a routerLink="logout"> 😀 Log Out</a>
+  <!-- <pre> {{ isLoggedIn$ | async }} </pre> -->
+  <a *ngIf="! (isLoggedIn$ | async) "
+     routerLink="login"> 👤 Log In</a>
+  <a *ngIf="(isLoggedIn$ | async)"
+     routerLink="logout"> 😀 Log Out</a>
   <a routerLink="bookings"> 💫 My Bookings</a>
   <span> 🛒 {{ bookingsCount }}</span>
 </header>
