@@ -10,12 +10,14 @@ import { LoginService } from "../login.service";
 })
 export class HeaderComponent implements OnInit {
   public title = "aldaba angular intro";
-  public bookingsCount: number = 0;
+  //public bookingsCount: number = 0;
   // public isLoggedIn: boolean;
   public isLoggedIn$: Observable<boolean>;
+  public bookingsCount$: Observable<number>;
 
   constructor(private bookingsService: BookingsService, private loginService: LoginService) {
-    this.bookingsCount = this.bookingsService.bookings.length;
+    //this.bookingsCount = this.bookingsService.bookings.length;
+    this.bookingsCount$ = this.bookingsService.bookingsCount$;
     //this.isLoggedIn = this.loginService.isLoggedIn;
     this.isLoggedIn$ = this.loginService.isLoggedIn$;
   }

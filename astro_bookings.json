@@ -99,6 +99,24 @@
       "hasPremiumFoods": false,
       "paymentId": "creditCard",
       "id": "LjGTyzI"
+    },
+    {
+      "tripId": "space-y-moon-1",
+      "travelerId": "alberto@aldaba.com",
+      "passengersCount": 1,
+      "status": "REQUESTED",
+      "hasPremiumFoods": false,
+      "paymentId": null,
+      "id": "Cqpiqfp"
+    },
+    {
+      "tripId": "space-y-mars-2",
+      "travelerId": "alberto@aldaba.com",
+      "passengersCount": 1,
+      "status": "REQUESTED",
+      "hasPremiumFoods": false,
+      "paymentId": null,
+      "id": "Kgg47Co"
     }
   ],
   "operators": [

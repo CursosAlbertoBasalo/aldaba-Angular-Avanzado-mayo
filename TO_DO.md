@@ -59,7 +59,7 @@
 - [x] Filtrar los viajes por destino
 - [x] Filtrar los operadores por rango
 - [x] Actualizar usuario después de login
-- [ ] Actualizar un contador de reservas activas en la cabecera
+- [x] Actualizar un contador de reservas activas en la cabecera
 
 ## 7. Componentes controladores y presentadores
 

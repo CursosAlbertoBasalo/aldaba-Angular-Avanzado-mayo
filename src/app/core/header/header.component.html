@@ -8,5 +8,5 @@
   <a *ngIf="(isLoggedIn$ | async)"
      routerLink="logout"> 😀 Log Out</a>
   <a routerLink="bookings"> 💫 My Bookings</a>
-  <span> 🛒 {{ bookingsCount }}</span>
+  <span> 🛒 {{ bookingsCount$ | async }}</span>
 </header>
