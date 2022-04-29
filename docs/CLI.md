@@ -5,6 +5,21 @@
 # 0️⃣ - Structure
 ################################################################################
 
+## Add auxiliary dependencies (CSS framework and API server)
+#===============================================================
+
+npm i @picocss/pico
+# :root { --spacing: 0.6rem; } on styles.css
+npm install -D json-server json-server-auth
+# database folder with routes an db json files
+
+# Start the application and the API server
+npm start
+npm run api
+
+## Clear initial component and styles
+#====================================
+
 ################################################################################
 # 1️⃣ - Components
 ################################################################################
