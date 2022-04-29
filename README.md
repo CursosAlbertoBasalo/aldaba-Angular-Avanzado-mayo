@@ -1,20 +1,20 @@
-# Aldaba Angular Intro
+# Aldaba Angular Avanzado
 
-> Introducción al desarrollo con Angular
+> Desarrollo avanzado con Angular
 
 ## Code
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version **10.2.4.**
 
 ```
-git clone https://github.com/LabsAdemy/Aldaba-Angular-Intro.git
+git clone https://github.com/LabsAdemy/aldaba-Angular-Avanzado-mayo.git
 npm i
 npm start
 ```
 
-## Exercise
+## Tasks
 
-Tasks for Astro Bookings: https://github.com/LabsAdemy/Aldaba-Angular-Intro/blob/main/TO_DO.md
+Cartea `docs` contiene ficheros con el listado de tareas funcionales y un diario de comandos usados para ejecutarlas.
 
 ---
 
@@ -34,6 +34,4 @@ Tasks for Astro Bookings: https://github.com/LabsAdemy/Aldaba-Angular-Intro/blob
   <h3>By Alberto Basalo</h3>
   <p >
    <a href="https://twitter.com/albertobasalo" target="blank"><img src="https://img.shields.io/twitter/follow/albertobasalo?logo=twitter&style=for-the-badge" alt="albertobasalo" /></a>
-  <!-- </p>
-     <a href="https://github.com/albertobasalo" target="blank"><img src="https://img.shields.io/github/followers/albertobasalo?logo=github&label=profile albertobasalo&style=for-the-badge" alt="albertobasalo" /></a> -->
 </footer>
