@@ -4,8 +4,8 @@
 
 ## 0. Estructura y configuración de la aplicación
 
-- [ ] Mostrar un listado de las agencias de viajes colaboradoras
-- [ ] Mostrar un listado de los viajes disponibles
+- [x] Mostrar un listado de las agencias de viajes colaboradoras
+- [x] Mostrar un listado de los viajes disponibles
 
 ## 1. Componentes para presentación de información
 
