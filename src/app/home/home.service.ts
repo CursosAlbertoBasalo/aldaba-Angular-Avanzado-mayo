@@ -16,6 +16,7 @@ export class HomeService {
     // return this.agencies.getAll$();
     return this.agencies.getAll$().pipe(delay(5000));
     // return this.agencies.getError$();
+    // return of([]);
   }
   getTrips$(): Observable<Trip[]> {
     return this.trips.getAll$();
