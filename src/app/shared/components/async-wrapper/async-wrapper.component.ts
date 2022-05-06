@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { Observable } from "rxjs";
+import { Observable, of } from "rxjs";
+import { catchError, map } from "rxjs/operators";
 
 type Api = {
   data?: unknown[];
@@ -14,6 +15,13 @@ type Api = {
 export class AsyncWrapperComponent implements OnInit {
   @Input() dataName = "";
   api$: Observable<Api>;
+  @Input() set http$(value$: Observable<unknown[]>) {
+    this.api$ = value$.pipe(
+      map((response) => ({ data: response, error: null })),
+      catchError((exception) => of({ data: null, error: exception.message })),
+    );
+  }
+
   constructor() {}
 
   ngOnInit(): void {}

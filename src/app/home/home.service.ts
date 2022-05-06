@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
+import { delay } from "rxjs/operators";
 import { Agency } from "../api/models/agency.interface";
 import { Trip } from "../api/models/trip.interface";
 import { AgenciesService } from "../api/services/agencies.service";
@@ -18,6 +19,8 @@ export class HomeService {
     // return of([]).pipe(delay(2000));
   }
   getTrips$(): Observable<Trip[]> {
-    return this.trips.getAll$();
+    return this.trips.getAll$().pipe(delay(2000));
+    //return this.trips.getError$();
+    //return of([]).pipe(delay(2000));
   }
 }
