@@ -1,1 +1,5 @@
-<app-preview [data]=" agencies"></app-preview>
+<ul>
+  <li *ngFor="let agency of agencies">
+    {{ agency.range | agencyRange }} {{ agency.name }}
+  </li>
+</ul>
