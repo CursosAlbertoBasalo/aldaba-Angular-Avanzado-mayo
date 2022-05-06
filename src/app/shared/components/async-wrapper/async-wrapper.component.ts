@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnInit, TemplateRef } from "@angular/core";
 import { Observable, of } from "rxjs";
 import { catchError, map } from "rxjs/operators";
 
@@ -13,8 +13,10 @@ type Api = {
   styleUrls: ["./async-wrapper.component.css"],
 })
 export class AsyncWrapperComponent implements OnInit {
-  @Input() dataName = "";
   api$: Observable<Api>;
+
+  @Input() dataTemplate: TemplateRef<HTMLElement>;
+  @Input() dataName = "";
   @Input() set http$(value$: Observable<unknown[]>) {
     this.api$ = value$.pipe(
       map((response) => ({ data: response, error: null })),

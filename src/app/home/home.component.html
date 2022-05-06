@@ -21,6 +21,13 @@
 </ng-template>
 
 <!-- <app-trips-list [trips]="trips$ | async"></app-trips-list> -->
+
 <app-async-wrapper dataName="trips"
+                   [dataTemplate]="tripsTemplate"
                    [http$]="trips$">
 </app-async-wrapper>
+
+<ng-template #tripsTemplate
+             let-context>
+  <app-trips-list [trips]="context"></app-trips-list>
+</ng-template>

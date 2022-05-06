@@ -1,9 +1,9 @@
 <ng-container *ngIf="api$ | async as api; else loading ">
   <ng-container *ngIf="api.data; else error">
     <ng-container *ngIf="api.data.length>0; else empty">
-      {{ api.data | json }}
-      <!-- <app-agencies-list [agencies]="api.data">
-      </app-agencies-list> -->
+      <!-- {{ api.data | json }} -->
+      <ng-container [ngTemplateOutlet]="dataTemplate"
+                    [ngTemplateOutletContext]="{ $implicit: api.data}"></ng-container>
     </ng-container>
   </ng-container>
   <ng-template #empty>
