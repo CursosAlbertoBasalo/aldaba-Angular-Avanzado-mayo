@@ -1,3 +1,23 @@
 <!-- {{ agencies$ | async | json }} -->
-<app-agencies-list [agencies]="agencies$ | async"></app-agencies-list>
+
+
+<ng-container *ngIf="agencies$ | async as agencies; else loading ">
+  <ng-container *ngIf="agencies.data; else error">
+    <ng-container *ngIf="agencies.data.length>0; else empty">
+      <app-agencies-list [agencies]="agencies.data">
+      </app-agencies-list>
+    </ng-container>
+  </ng-container>
+  <ng-template #empty>
+    <app-empty dataName="agencies"></app-empty>
+  </ng-template>
+  <ng-template #error>
+    <app-error dataName="agencies"
+               [error]="agencies.error"></app-error>
+  </ng-template>
+</ng-container>
+<ng-template #loading>
+  <app-loading dataName="agencies"></app-loading>
+</ng-template>
+
 <app-trips-list [trips]="trips$ | async"></app-trips-list>
