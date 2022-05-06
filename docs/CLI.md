@@ -52,6 +52,27 @@ ng g s home/home
 # 1️⃣ - Components
 ################################################################################
 
+## Functional Presentational components
+#====================================
+# Container and templates as a presentational components
+ng g c home/agencies --type list
+ng g c home/trips --type list
+
+ng g c shared/components/asyncWrapper --export true
+
+
+## Async wrapper
+#===============
+
+# Responsible of async data loading, error detection and template rendering
+# TemplateRef as input parameter
+# Data$ as input parameter, with get set methods
+# Container with templateOutlet and templateContext
+
+# Pipes
+#======
+ng g p shared/pipes/agencyRange --export true
+
 ################################################################################
 # 2️⃣ - Router
 ################################################################################
