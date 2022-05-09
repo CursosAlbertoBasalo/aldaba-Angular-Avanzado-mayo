@@ -17,18 +17,14 @@
 
 ## 2. Rutas, datos y control de accesos
 
-- [ ] Proteger la entrada a la página de usuarios no autorizados
-- [ ] Página con menus y componentes anidados
+- [x] Proteger la entrada a la página de usuarios no autorizados
+- [x] Página con menus y componentes anidados
 
 ## 3. Inyección de dependencias
 
-- [ ] Caché de llamadas HTTP (filter, tap)
-- [ ] Gestión de estado de las comunicaciones HTTP (para usar más adelante con un store)
-- [ ] Control de errores de las comunicaciones HTTP (retryWhen, catchError, mergeMap)
-- [ ] Obtener lista de viajes de la agencia activa (switchMap vs mergeMap)
-- [ ] Obtener total de plazas ofertadas por todas las agencias (forkJoin)
-- [ ] Un buscador de vuelos (fromEvent, debounceTime, distinctUntilChanged)
-- [ ] Compartir resultados asíncronos (share, shareReplay)
+- [x] Patrón estrategia con pesos en distintas unidades
+- [x] Inyectar el servicio de logs
+- [ ] Interceptor
 
 ## 4. Redux
 

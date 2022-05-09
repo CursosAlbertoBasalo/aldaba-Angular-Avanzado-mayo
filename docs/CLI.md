@@ -85,6 +85,12 @@ ng g guard amazon/amazon --implements CanActivate --implements CanDeactivate --i
 # 3️⃣ - Injection
 ################################################################################
 
+ng g s labs/weightAbstract
+ng g s labs/weightMetric
+ng g s labs/weightImperial
+
+ng g s core/logger
+
 ################################################################################
 # 4️⃣ - Redux
 ################################################################################
