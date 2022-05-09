@@ -17,13 +17,8 @@
 
 ## 2. Rutas, datos y control de accesos
 
-- [ ] Una página para la gestión de agencias espaciales
-- [ ] Resolver los datos antes de entrar en la página
-- [ ] Una página para el alta de una nueva agencia
 - [ ] Proteger la entrada a la página de usuarios no autorizados
-- [ ] Redirigir a los no autenticados a la página de login
-- [ ] Redirigir tras el login a la página de inicio
-- [ ] Proteger la salida para datos no guardados
+- [ ] Página con menus y componentes anidados
 
 ## 3. Inyección de dependencias
 

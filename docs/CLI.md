@@ -77,9 +77,9 @@ ng g p shared/pipes/agencyRange --export true
 # 2️⃣ - Router
 ################################################################################
 
-################################################################################
-# 3️⃣ - Injection
-################################################################################
+ng g guard amazon/amazon --implements CanActivate --implements CanDeactivate --implements CanLoad
+
+# amazon nested sub components
 
 ################################################################################
 # 3️⃣ - Injection
