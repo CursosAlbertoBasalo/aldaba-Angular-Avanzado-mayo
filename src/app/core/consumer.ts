@@ -1,4 +1,4 @@
-import { AtomicStore } from "./atomic.store";
+import { AtomicStore, Reducer } from "./atomic.store";
 
 export class Cuenta {
   saldo: number;
@@ -26,11 +26,10 @@ function agregarTitular(current: Cuenta, titular: string) {
   return state;
 }
 
-const reductores = [
-  { type: "Ingresar", reducer: ingresar },
-  { type: "Retirar", reducer: retirar },
-  { type: "AgregarTitular", reducer: agregarTitular },
-];
+const reductores = new Map<string, Reducer<Cuenta>>();
+reductores.set("Ingresar", ingresar);
+reductores.set("Retirar", retirar);
+reductores.set("AgregarTitular", agregarTitular);
 
 const cuentaManuel = new AtomicStore<Cuenta>(cuenta1, reductores);
 //cuentaManuel.set(cuenta1);
