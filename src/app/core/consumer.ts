@@ -1,3 +1,4 @@
+import { distinctUntilChanged, filter, map, tap } from "rxjs/operators";
 import { AtomicStore, Reducer } from "./atomic.store";
 
 export class Cuenta {
@@ -47,3 +48,24 @@ cuentaManuel.dispatch({ type: "Ingresar", payload: { importe: 5 } });
 cuentaManuel.dispatch({ type: "Retirar", payload: { importe: 15 } });
 cuentaManuel.dispatch({ type: "Ingresar", payload: { importe: 8 } });
 cuentaManuel.dispatch({ type: "AgregarTitular", payload: { titular: "pepe" } });
+
+type Partido = { resultado: string; tarjetas: number; goles: number };
+const partidoReductores;
+const laFinal = new AtomicStore<Partido>({ resultado: "X", tarjetas: 0, goles: 0 }, partidoReductores);
+
+const selector = (partido) => partido.goles;
+laFinal
+  .get$()
+  .pipe(map(selector), distinctUntilChanged())
+  .subscribe((data) => console.log(data));
+
+laFinal
+  .select$<number>((p) => p.goles)
+  .pipe(
+    filter((goles) => goles > 5),
+    tap((goles) => console.log("" + goles)),
+  )
+  .subscribe((goles) => console.log(goles));
+
+laFinal.select$<number>((p) => p.goles - p.tarjetas);
+laFinal.select$<string>((p) => p.resultado);

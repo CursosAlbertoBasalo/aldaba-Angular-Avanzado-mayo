@@ -6,12 +6,11 @@ export type Reducer<T> = (state: T, payload: unknown) => T;
 export type Selector<T, K> = (state: T) => K;
 export type Change<T> = { action: Action; current: T; next: T };
 
-// export type Effect<T> = (change: Change<T>) => void;
-// export type Filter<T> = (change: Change<T>) => boolean;
-
 export class AtomicStore<T> {
   private state$: BehaviorSubject<T>;
+
   private changes$ = new ReplaySubject<Change<T>>();
+
   private setStateReducer: Reducer<T> = (state, payload) => ({ ...state, ...(payload as Partial<T>) });
 
   constructor(initialValue: T, private reducers: Map<string, Reducer<T>>) {
@@ -25,7 +24,7 @@ export class AtomicStore<T> {
   }
 
   public get$(): Observable<T> {
-    return this.state$.asObservable();
+    return this.state$.asObservable().pipe(map((state) => this.clone(state)));
   }
 
   public select$<K>(selector: Selector<T, K>): Observable<K> {
@@ -33,7 +32,7 @@ export class AtomicStore<T> {
   }
 
   public getChanges$() {
-    return this.changes$.asObservable();
+    return this.changes$.asObservable().pipe(map((change) => ({ ...change })));
   }
 
   public set(value: Partial<T>) {
