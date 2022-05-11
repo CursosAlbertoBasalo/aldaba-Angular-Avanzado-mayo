@@ -11,6 +11,7 @@ const routes: Routes = [
   },
   { path: "zara", loadChildren: () => import("./zara/zara.module").then((m) => m.ZaraModule) },
   { path: 'labs', loadChildren: () => import('./labs/labs.module').then(m => m.LabsModule) },
+  { path: 'trips', loadChildren: () => import('./trips/trips.module').then(m => m.TripsModule) },
 ];
 
 @NgModule({
