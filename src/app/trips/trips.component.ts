@@ -19,6 +19,10 @@ export class TripsComponent implements OnInit {
 
   constructor(private readonly trips: TripsService, private readonly agencies: AgenciesService) {}
 
+  miFn() {
+    this.trips.getAll$();
+  }
+
   ngOnInit(): void {
     this.searchInput$ = fromEvent(this.searchInput.nativeElement, "keyup").pipe(
       map((event) => (event as any).target.value as string),
