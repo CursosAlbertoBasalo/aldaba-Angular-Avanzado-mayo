@@ -1,10 +1,9 @@
 import { CommonModule } from "@angular/common";
-import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { HttpClientModule } from "@angular/common/http";
 import { InjectionToken, NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { FooterComponent } from "./components/footer/footer.component";
 import { HeaderComponent } from "./components/header/header.component";
-import { ACañizaInterceptor } from "./error.interceptor";
 import { LoggerService } from "./logger.service";
 
 export const APP_VERSION = new InjectionToken<string>("appVersion");
@@ -19,7 +18,7 @@ export const ONLY_ERRORS = new InjectionToken<boolean>("onlyErrors");
     { provide: APP_VERSION, useValue: "2.0.0" },
     { provide: ONLY_ERRORS, useValue: false },
     // { provide: HTTP_INTERCEPTOR, useClass: ACañizaInterceptor },
-    { provide: HTTP_INTERCEPTORS, useClass: ACañizaInterceptor, multi: true },
+    // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
 })
 export class CoreModule {
